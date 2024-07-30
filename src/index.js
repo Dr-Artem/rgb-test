@@ -65,6 +65,6 @@ document.getElementById('registrationForm').addEventListener('submit', function 
             .catch(error => {
                 console.error('Error:', error);
             });
-        this.submit();
+        // this.submit();
     }
 });
