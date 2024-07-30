@@ -18,6 +18,7 @@ jobs:
 
               env:
                   TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+                  CHAT_ID: ${{ secrets.CHAT_ID }}
 
             - name: Deploy 🚀
               uses: JamesIves/github-pages-deploy-action@4.1.0
