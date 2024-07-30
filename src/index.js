@@ -33,16 +33,7 @@ document.getElementById('registrationForm').addEventListener('submit', function 
         const message = `Name: ${name}\nPhone: ${number ? number : phone}\nName: ${email}`;
 
         const botToken = process.env.TELEGRAM_BOT_TOKEN;
-        let chatId;
-
-        fetch(`https://api.telegram.org/bot${botToken}/getUpdates`)
-            .then(response => response.json())
-            .then(data => {
-                chatId = data.result[0].message.chat.id;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+        const chatId process.env.CHAT_ID;
 
         fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
             method: 'POST',
