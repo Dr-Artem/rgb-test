@@ -32,7 +32,7 @@ document.getElementById('registrationForm').addEventListener('submit', function 
     } else {
         const message = `Name: ${name}\nPhone: ${number ? number : phone}\nName: ${email}`;
 
-        const botToken = TELEGRAM_BOT_TOKEN;
+        const botToken = process.env.TELEGRAM_BOT_TOKEN;
         let chatId;
 
         fetch(`https://api.telegram.org/bot${botToken}/getUpdates`)
